@@ -18,12 +18,26 @@ var HammerHead = (function(){
         //seperate counter for indexing instructions
         this.index = 0;
         this.funcs = ASM;
+        this.returnval = null;
     }
     HammerHead.prototype.runcode = function(code){
         //splits the code by newline or white space
         var instrucs = code.split(/ |\n/);
+        for(this.index = 0;this.index<instrucs.length;this.index++) {
+            if(instrucs[this.index] in this.funcs) {
+                this.funcs[instrucs[this.index]](this);
+            }
+            else {
+                return "ERROR OP"
+            }
+        }
+        //returns the requested value
+        var response = this.returnval;
+        this.returnval = null;
+        return response
     };
     return HammerHead;
 })();
 
 exports.HammerHead = HammerHead;
+
