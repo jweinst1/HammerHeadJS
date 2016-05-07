@@ -14,5 +14,13 @@
     "interpreter"
   ],
   "author": "Joshua Weinstein <jweinst1@berkeley.edu> (https://github.com/jweinst1)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jweinst1/HammerHeadJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jweinst1/HammerHeadJS/issues"
+  },
+  "homepage": "https://github.com/jweinst1/HammerHeadJS#readme"
 }
