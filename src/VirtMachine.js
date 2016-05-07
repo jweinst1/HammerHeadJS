@@ -8,11 +8,50 @@ var HammerHead = (function(){
         "inp_1":function(mach){
            mach.pointer += 1;
         },
+        "inp_2":function(mach){
+            mach.pointer += 2;
+        },
+        "inp_3":function(mach){
+            mach.pointer += 3;
+        },
+        "inp_4":function(mach){
+            mach.pointer += 4;
+        },
+        "inp_5":function(mach){
+            mach.pointer += 5;
+        },
+        "inp_10":function(mach){
+            mach.pointer += 10;
+        },
+        "inp_20":function(mach){
+            mach.pointer += 20;
+        },
+        "inp_25":function(mach){
+            mach.pointer += 25;
+        },
+        "inp_50":function(mach){
+            mach.pointer += 1;
+        },
+        "inp_100":function(mach){
+            mach.pointer += 1;
+        },
+        "inp_200":function(mach){
+            mach.pointer += 1;
+        },
+        "inp_1000":function(mach){
+            mach.pointer += 1;
+        },
         "ldi_0":function(mach){
             mach.cells[mach.pointer] = 0;
         },
         "ldi_1":function(mach){
             mach.cells[mach.pointer] = 1;
+        },
+        "ldi_2":function(mach){
+            mach.cells[mach.pointer] = 2;
+        },
+        "ldi_3":function(mach){
+            mach.cells[mach.pointer] = 3;
         },
         "sre_c":function(mach){
             mach.returnval = mach.cells[mach.pointer]
