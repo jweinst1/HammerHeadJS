@@ -5,11 +5,17 @@
 var HammerHead = (function(){
     //private variable to store operations
     var ASM = {
+        "inp_1":function(mach){
+           mach.pointer += 1;
+        },
         "ldi_0":function(mach){
             mach.cells[mach.pointer] = 0;
         },
         "ldi_1":function(mach){
             mach.cells[mach.pointer] = 1;
+        },
+        "sre_c":function(mach){
+            mach.returnval = mach.cells[mach.pointer]
         }
     };
     function HammerHead(){
