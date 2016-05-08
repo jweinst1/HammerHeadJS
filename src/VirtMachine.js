@@ -5,6 +5,7 @@
 var HammerHead = (function(){
     //private variable to store operations
     var ASM = {
+        //inp op codes increase the pointer
         "inp_1":function(mach){
            mach.pointer += 1;
         },
@@ -41,6 +42,7 @@ var HammerHead = (function(){
         "inp_1000":function(mach){
             mach.pointer += 1000;
         },
+        //dep opcodes decrease the pointer
         "dep_1":function(mach){
             mach.pointer -= 1;
         },
@@ -77,6 +79,17 @@ var HammerHead = (function(){
         "dep_1000":function(mach){
             mach.pointer -= 1000;
         },
+        //stp opcodes set the pointer to a specific value.
+        "stp_0":function(mach){
+            mach.pointr = 0;
+        },
+        "stp_1":function(mach){
+            mach.pointr = 1;
+        },
+        "stp_5":function(mach){
+            mach.pointr = 5;
+        },
+        //ldi opcodes load an integer value to the cell
         "ldi_0":function(mach){
             mach.cells[mach.pointer] = 0;
         },
@@ -128,20 +141,39 @@ var HammerHead = (function(){
         "ldi_10000":function(mach){
             mach.cells[mach.pointer] = 10000;
         },
+        //ldb opcodes load a boolean to the current cell
         "ldb_t":function(mach){
            mach.cells[mach.pointer] = true;
         },
         "ldb_f":function(mach){
             mach.cells[mach.pointer] = false;
         },
+        //lds opcodes load a string to the current cell
         "lds_":function(mach){
-            mach.cells[mach.pointer] = '';
+            mach.cells[mach.pointer] = "";
         },
+        //lda opcodes load arrays to the current cell
         "lda_":function(mach){
             mach.cells[mach.pointer] = [];
         },
+        //ldo opcodes load empty objects to the current cell
+        "ldo_":function(mach){
+            mach.cells[mach.pointer] = {};
+        },
+        //ldn opcodes load null to the current cell.
+        "ldn_":function(mach){
+            mach.cells[mach.pointer] = null;
+        },
+        //sre opcodes set the return value
         "sre_c":function(mach){
-            mach.returnval = mach.cells[mach.pointer]
+            mach.returnval = mach.cells[mach.pointer];
+        },
+        "sre_0":function(mach){
+            mach.returnval = mach.cells[0];
+        },
+        //adi op codes add an integer to the value of the current cell
+        "adi_1":function(mach){
+            mach.cells[mach.pointer] += 1;
         }
     };
     function HammerHead(){

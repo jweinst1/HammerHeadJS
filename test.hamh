@@ -2,4 +2,6 @@ ldi_0
 ldi_1
 inp_1
 ldi_1
+stp_0
+ldi_100
 sre_c
