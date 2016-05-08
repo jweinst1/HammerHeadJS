@@ -227,6 +227,16 @@ var HammerHead = (function(){
         "afi_1":function(mach){
             mach.cells[mach.pointer+1] += mach.cells[mach.pointer]
         },
+        "afi_2":function(mach){
+            mach.cells[mach.pointer+2] += mach.cells[mach.pointer]
+        },
+        "afi_3":function(mach){
+            mach.cells[mach.pointer+3] += mach.cells[mach.pointer]
+        },
+        //bt opcodes set the current cell value to true if it evaluates to true
+        "bt_":function(mach){
+            mach.cells[mach.pointer] ? mach.cells[mach.pointer] = true : mach.cells[mach.pointer] = false
+        },
         //tfw opcodes transfer values forward and overwrite the targeted cell's value
         "tfw_1":function(mach){
             mach.cells[mach.pointer+1] = mach.cells[mach.pointer]
