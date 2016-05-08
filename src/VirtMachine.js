@@ -164,6 +164,10 @@ var HammerHead = (function(){
         "ldn_":function(mach){
             mach.cells[mach.pointer] = null;
         },
+        //ldu opcodes load an undefined in the current cell
+        "ldu_":function(mach){
+            mach.cells[mach.pointer] = undefined;
+        },
         //sre opcodes set the return value
         "sre_c":function(mach){
             mach.returnval = mach.cells[mach.pointer];
@@ -174,6 +178,13 @@ var HammerHead = (function(){
         //adi op codes add an integer to the value of the current cell
         "adi_1":function(mach){
             mach.cells[mach.pointer] += 1;
+        },
+        "adi_2":function(mach){
+            mach.cells[mach.pointer] += 2;
+        },
+        //tfw opcodes transfer values forward and overwrite the targeted cell's value
+        "tfw_1":function(mach){
+            mach.cells[mach.pointer+1] = mach.cells[mach.pointer]
         }
     };
     function HammerHead(){
