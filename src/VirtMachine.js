@@ -125,11 +125,20 @@ var HammerHead = (function(){
         "ldi_5000":function(mach){
             mach.cells[mach.pointer] = 5000;
         },
+        "ldi_10000":function(mach){
+            mach.cells[mach.pointer] = 10000;
+        },
         "ldb_t":function(mach){
            mach.cells[mach.pointer] = true;
         },
         "ldb_f":function(mach){
             mach.cells[mach.pointer] = false;
+        },
+        "lds_":function(mach){
+            mach.cells[mach.pointer] = '';
+        },
+        "lda_":function(mach){
+            mach.cells[mach.pointer] = [];
         },
         "sre_c":function(mach){
             mach.returnval = mach.cells[mach.pointer]
