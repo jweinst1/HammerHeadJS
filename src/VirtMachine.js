@@ -182,9 +182,74 @@ var HammerHead = (function(){
         "adi_2":function(mach){
             mach.cells[mach.pointer] += 2;
         },
+        //sbi op codes subtract integers from the current value of the cell
+        "sbi_1":function(mach){
+            mach.cells[mach.pointer] -= 1;
+        },
+        "sbi_2":function(mach){
+            mach.cells[mach.pointer] -= 2;
+        },
+        //mli op codes multiply integers on the current value of the cell
+        "mli_1":function(mach){
+            mach.cells[mach.pointer] *= 1;
+        },
+        "mli_2":function(mach){
+            mach.cells[mach.pointer] *= 2;
+        },
+        //dvi op codes divide integers on the current value of the cell
+        "dvi_1":function(mach){
+            mach.cells[mach.pointer] /= 1;
+        },
+        "dvi_2":function(mach){
+            mach.cells[mach.pointer] /= 2;
+        },
+        //rdi op code perform remainder operations on the current value of the cell
+        "rdi_1":function(mach){
+            mach.cells[mach.pointer] %= 1;
+        },
+        "rdi_2":function(mach){
+            mach.cells[mach.pointer] %= 2;
+        },
         //tfw opcodes transfer values forward and overwrite the targeted cell's value
         "tfw_1":function(mach){
             mach.cells[mach.pointer+1] = mach.cells[mach.pointer]
+        },
+        "tfw_2":function(mach){
+            mach.cells[mach.pointer+2] = mach.cells[mach.pointer]
+        },
+        //tbw opcodes transfer values backward and overwrite the targeted cells' value
+        "tbw_1":function(mach){
+            mach.cells[mach.pointer-1] = mach.cells[mach.pointer]
+        },
+        "tbw_2":function(mach){
+            mach.cells[mach.pointer-2] = mach.cells[mach.pointer]
+        },
+        //rp opcodes repeat the previous opcode some number of times. Utilizes repeatcount tracker of the machine
+        "rp_1":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 0;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "rp_5":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 4;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
         }
     };
     function HammerHead(){
@@ -192,6 +257,8 @@ var HammerHead = (function(){
         this.pointer = 0;
         //seperate counter for indexing instructions
         this.index = 0;
+        //keeps track of repeating instructions
+        this.repeatcount = false;
         this.funcs = ASM;
         this.returnval = null;
     }
