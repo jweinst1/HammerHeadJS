@@ -89,6 +89,48 @@ var HammerHead = (function(){
         "ldi_3":function(mach){
             mach.cells[mach.pointer] = 3;
         },
+        "ldi_4":function(mach){
+            mach.cells[mach.pointer] = 4;
+        },
+        "ldi_5":function(mach){
+            mach.cells[mach.pointer] = 5;
+        },
+        "ldi_10":function(mach){
+            mach.cells[mach.pointer] = 10;
+        },
+        "ldi_20":function(mach){
+            mach.cells[mach.pointer] = 20;
+        },
+        "ldi_25":function(mach){
+            mach.cells[mach.pointer] = 25;
+        },
+        "ldi_50":function(mach){
+            mach.cells[mach.pointer] = 50;
+        },
+        "ldi_100":function(mach){
+            mach.cells[mach.pointer] = 100;
+        },
+        "ldi_200":function(mach){
+            mach.cells[mach.pointer] = 200;
+        },
+        "ldi_500":function(mach){
+            mach.cells[mach.pointer] = 500;
+        },
+        "ldi_1000":function(mach){
+            mach.cells[mach.pointer] = 1000;
+        },
+        "ldi_2000":function(mach){
+            mach.cells[mach.pointer] = 2000;
+        },
+        "ldi_5000":function(mach){
+            mach.cells[mach.pointer] = 5000;
+        },
+        "ldb_t":function(mach){
+           mach.cells[mach.pointer] = true;
+        },
+        "ldb_f":function(mach){
+            mach.cells[mach.pointer] = false;
+        },
         "sre_c":function(mach){
             mach.returnval = mach.cells[mach.pointer]
         }
