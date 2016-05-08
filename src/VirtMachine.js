@@ -89,6 +89,9 @@ var HammerHead = (function(){
         "stp_5":function(mach){
             mach.pointr = 5;
         },
+        "stp_c":function(mach){
+            if(typeof mach.cells[mach.pointer] === 'number') mach.pointer = mach.cells[mach.pointer]
+        },
         //ldi opcodes load an integer value to the cell
         "ldi_0":function(mach){
             mach.cells[mach.pointer] = 0;
@@ -168,6 +171,16 @@ var HammerHead = (function(){
         "ldu_":function(mach){
             mach.cells[mach.pointer] = undefined;
         },
+        //ccs opcodes concat strings to the current cell
+        "ccs_a":function(mach){
+            mach.cells[mach.pointer] += "a"
+        },
+        "ccs_b":function(mach){
+            mach.cells[mach.pointer] += "b"
+        },
+        "ccs_c":function(mach){
+            mach.cells[mach.pointer] += "c"
+        },
         //sre opcodes set the return value
         "sre_c":function(mach){
             mach.returnval = mach.cells[mach.pointer];
@@ -210,6 +223,10 @@ var HammerHead = (function(){
         "rdi_2":function(mach){
             mach.cells[mach.pointer] %= 2;
         },
+        //afi op codes add the value of the current cell to the next cells
+        "afi_1":function(mach){
+            mach.cells[mach.pointer+1] += mach.cells[mach.pointer]
+        },
         //tfw opcodes transfer values forward and overwrite the targeted cell's value
         "tfw_1":function(mach){
             mach.cells[mach.pointer+1] = mach.cells[mach.pointer]
@@ -241,6 +258,19 @@ var HammerHead = (function(){
         "rp_5":function(mach){
             if(mach.repeatcount === false) {
                 mach.repeatcount = 4;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "rp_10":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 9;
                 mach.index -= 2;
             }
             else if(mach.repeatcount === 0){
