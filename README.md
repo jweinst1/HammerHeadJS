@@ -24,4 +24,12 @@ Additionally, all the instruction codes are deterministic. This means, the codes
 opcode funct  register register destination
 ```
 
-In this format, the instruction code is formed via an order of smaller codes that encompass smaller meanings.
+In this format, the instruction code is formed via an order of smaller codes that encompass smaller meanings. 
+
+With HammerHead, the instructions are entirely deterministic, laid out much like unicode characters are. For example, on the machine's array, adding the next cell to the current cell, would corrsepond to a code such as `acr`, or in binary `01100001 01100011 01110010`. The `acr` code will only ever perform that single function on the machine doing a code such as `abr` will perform an entirely different function as it leads to another family of instructions.
+
+###Organization
+
+The instruction set in HammerHead are organized as 3 byte length, 24 bit instructions, which are read encoded as alphabet letters. In terms of format, `[A-Za-z][A-Za-z][A-Za-z]` would be the proper regular expression to match any instruction. The first byte, or letter, is treated as the most important sign, while the second is sorted under the first, and the third under the second.
+
+For example, the code `aaa` is the very first code in all of hammerheads instruction set, which corresponds to incrementing the pointer of the machine by 1 cell. The code `aab`, is very closely related, as it increments the pointer by 2. Yet when we get to the code `aar`, the function of the code is then to decrement the pointer by 1.
