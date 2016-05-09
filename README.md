@@ -15,4 +15,13 @@ HammerHead uses an array based machine, which uses the blocks of memory in a tra
 
 ##Instruction Codes
 
-HammerHead uses determinstic and indeterministic instruction codes, all of which are dividied into families.
+HammerHead uses 24-bit length instruction codes, seperated into lengths of 3 bytes. All instructions are UTF-8 encoded, to correspond to an easier to read format and handling. Part of HammerHead's purpose is to serve as a gateway for many different languages to run both in the browser and in the desktop via a compiled executable of the machine, or from a Node package.
+
+Additionally, all the instruction codes are deterministic. This means, the codes themselves do not contain arguments for values, or operands, but always corrsepond to some preset value or function on the machine. in MIPS architecture, to add two values of a register, and store them in another register, such as `add r1, r2, r3` where the value will be stored in `r1`, you have to do the following:
+
+```
+000000 00010 00011 00001 00000 100000
+opcode funct  register register destination
+```
+
+In this format, the instruction code is formed via an order of smaller codes that encompass smaller meanings.
