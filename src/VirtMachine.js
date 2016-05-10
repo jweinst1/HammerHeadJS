@@ -113,6 +113,57 @@ var HammerHead = (function(){
         "aaI":function(mach){
             mach.pointer = 10;
         },
+        "aaJ":function(mach){
+            mach.pointer = 20;
+        },
+        "aaK":function(mach){
+            mach.pointer = 25;
+        },
+        "aaL":function(mach){
+            mach.pointer = 50;
+        },
+        "aaM":function(mach){
+            mach.pointer = 100;
+        },
+        "aaN":function(mach){
+            mach.pointer = 200;
+        },
+        "aaO":function(mach){
+            mach.pointer = 500;
+        },
+        "aaP":function(mach){
+            mach.pointer = 1000;
+        },
+        "aaQ":function(mach){
+            mach.pointer *= 2;
+        },
+        "aaR":function(mach){
+            mach.pointer *= 3;
+        },
+        "aaS":function(mach){
+            mach.pointer *= 4;
+        },
+        "aaT":function(mach){
+            mach.pointer *= 5;
+        },
+        "aaU":function(mach){
+            mach.pointer *= 10;
+        },
+        "aaV":function(mach){
+            mach.pointer *= 100;
+        },
+        "aaW":function(mach){
+           mach.pointer = Math.floor(mach.pointer / 2);
+        },
+        "aaX":function(mach){
+            mach.pointer = Math.floor(mach.pointer / 3);
+        },
+        "aaY":function(mach){
+            mach.pointer = Math.floor(mach.pointer / 5);
+        },
+        "aaZ":function(mach){
+            mach.pointer = Math.floor(mach.pointer / 10);
+        },
         //ldi opcodes load an integer value to the cell
         "ldi_0":function(mach){
             mach.cells[mach.pointer] = 0;

@@ -3,4 +3,7 @@
 
 aaa-aam ---> Increase Pointer
 aan-aaz ---> Decrease Pointer
-aaA     ---> Set pointer specific
+aaA-aaP ---> Set pointer specific
+aaQ-aaV ---> multiply pointer
+aaW-aaZ ---> floor divide pointer
+aba-
