@@ -6,40 +6,40 @@ var HammerHead = (function(){
     //private variable to store operations
     var ASM = {
         //inp op codes increase the pointer
-        "inp_1":function(mach){
+        "aaa":function(mach){
            mach.pointer += 1;
         },
-        "inp_2":function(mach){
+        "aab":function(mach){
             mach.pointer += 2;
         },
-        "inp_3":function(mach){
+        "aac":function(mach){
             mach.pointer += 3;
         },
-        "inp_4":function(mach){
+        "aad":function(mach){
             mach.pointer += 4;
         },
-        "inp_5":function(mach){
+        "aae":function(mach){
             mach.pointer += 5;
         },
-        "inp_10":function(mach){
+        "aaf":function(mach){
             mach.pointer += 10;
         },
-        "inp_20":function(mach){
+        "aag":function(mach){
             mach.pointer += 20;
         },
-        "inp_25":function(mach){
+        "aah":function(mach){
             mach.pointer += 25;
         },
-        "inp_50":function(mach){
+        "aai":function(mach){
             mach.pointer += 50;
         },
-        "inp_100":function(mach){
+        "aaj":function(mach){
             mach.pointer += 100;
         },
-        "inp_200":function(mach){
+        "aak":function(mach){
             mach.pointer += 200;
         },
-        "inp_1000":function(mach){
+        "aal":function(mach){
             mach.pointer += 1000;
         },
         //dep opcodes decrease the pointer

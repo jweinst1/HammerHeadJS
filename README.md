@@ -9,6 +9,20 @@ In traditional virtual machines, a stack is used as the backbone of the machine,
 
 Registers, on the otherhand are a faster method of computation. Most physical CPU's and machines use registers. Registers, providing quickly accessivle spaces of storage and computation,  are more difficult to access in an ordered fashion, and are normally limited in the available number of registers.
 
+##Installation
+
+To install HammerHeadjs, just type this in your shell:
+
+```
+npm install hammerheadjs -g
+```
+
+To use the VM, via the node package, just use the hammerhead command
+
+```
+hammerhead <filename>
+```
+
 ###The Array Machine
 
 HammerHead uses an array based machine, which uses the blocks of memory in a traditional array to store and manipulate values. The machine itself operates on a pre-allocated 10000 cell array, all of which are `undefined` initially. To facilitate easy access to individual cells, the machine has a pointer arm, or a stored integer value that corresponds to the current cell. This current cell, is the one op and instruction codes will correspond to when used on the machine.
@@ -33,3 +47,10 @@ With HammerHead, the instructions are entirely deterministic, laid out much like
 The instruction set in HammerHead are organized as 3 byte length, 24 bit instructions, which are read encoded as alphabet letters. In terms of format, `[A-Za-z][A-Za-z][A-Za-z]` would be the proper regular expression to match any instruction. The first byte, or letter, is treated as the most important sign, while the second is sorted under the first, and the third under the second.
 
 For example, the code `aaa` is the very first code in all of hammerheads instruction set, which corresponds to incrementing the pointer of the machine by 1 cell. The code `aab`, is very closely related, as it increments the pointer by 2. Yet when we get to the code `aar`, the function of the code is then to decrement the pointer by 1.
+
+In total, there are about `140,000` possible instructions, with `aaa` being the first, and `ZZZ` being the very last instruction.
+
+###Purpose
+
+HammerHead is designed to facilitate more robust features than other virtual machines, more than just conditionals, branching, and jumps. The purpose of this is to take more work off a compiler, and offer many different options for languages created to run on HammerHead.
+
