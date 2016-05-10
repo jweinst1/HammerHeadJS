@@ -10,3 +10,8 @@ aba-abr ---> load integer
 abs-abx ---> load decimal-float
 aby ---> load true boolean
 abz ---> load false boolean
+abA ---> load empty string
+abB ---> load empty array
+abC ---> load empty object
+abD ---> load null
+abE ---> load undefined

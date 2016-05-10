@@ -246,23 +246,23 @@ var HammerHead = (function(){
             mach.cells[mach.pointer] = false;
         },
         //lds opcodes load a string to the current cell
-        "lds_":function(mach){
+        "abA":function(mach){
             mach.cells[mach.pointer] = "";
         },
         //lda opcodes load arrays to the current cell
-        "lda_":function(mach){
+        "abB":function(mach){
             mach.cells[mach.pointer] = [];
         },
         //ldo opcodes load empty objects to the current cell
-        "ldo_":function(mach){
+        "abC":function(mach){
             mach.cells[mach.pointer] = {};
         },
         //ldn opcodes load null to the current cell.
-        "ldn_":function(mach){
+        "abD":function(mach){
             mach.cells[mach.pointer] = null;
         },
         //ldu opcodes load an undefined in the current cell
-        "ldu_":function(mach){
+        "adE":function(mach){
             mach.cells[mach.pointer] = undefined;
         },
         //ccs opcodes concat strings to the current cell
