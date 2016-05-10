@@ -40,57 +40,78 @@ var HammerHead = (function(){
             mach.pointer += 200;
         },
         "aal":function(mach){
+            mach.pointer += 500;
+        },
+        "aam":function(mach){
             mach.pointer += 1000;
         },
         //dep opcodes decrease the pointer
-        "dep_1":function(mach){
+        "aan":function(mach){
             mach.pointer -= 1;
         },
-        "dep_2":function(mach){
+        "aao":function(mach){
             mach.pointer -= 2;
         },
-        "dep_3":function(mach){
+        "aap":function(mach){
             mach.pointer -= 3;
         },
-        "dep_4":function(mach){
+        "aaq":function(mach){
             mach.pointer -= 4;
         },
-        "dep_5":function(mach){
+        "aar":function(mach){
             mach.pointer -= 5;
         },
-        "dep_10":function(mach){
+        "aas":function(mach){
             mach.pointer -= 10;
         },
-        "dep_20":function(mach){
+        "aat":function(mach){
             mach.pointer -= 20;
         },
-        "dep_25":function(mach){
+        "aau":function(mach){
             mach.pointer -= 25;
         },
-        "dep_50":function(mach){
+        "aav":function(mach){
             mach.pointer -= 50;
         },
-        "dep_100":function(mach){
+        "aaw":function(mach){
             mach.pointer -= 100;
         },
-        "dep_200":function(mach){
+        "aax":function(mach){
             mach.pointer -= 200;
         },
-        "dep_1000":function(mach){
+        "aay":function(mach){
+            mach.pointer -= 500;
+        },
+        "aaz":function(mach){
             mach.pointer -= 1000;
         },
-        //stp opcodes set the pointer to a specific value.
-        "stp_0":function(mach){
-            mach.pointr = 0;
+        //sets pointer to specific value
+        "aaA":function(mach){
+            if(typeof mach.cells[mach.pointer] === 'number') mach.pointer = mach.cells[mach.pointer];
         },
-        "stp_1":function(mach){
-            mach.pointr = 1;
+        "aaB":function(mach){
+            mach.pointer = 0;
         },
-        "stp_5":function(mach){
-            mach.pointr = 5;
+        "aaC":function(mach){
+            mach.pointer = 1;
         },
-        "stp_c":function(mach){
-            if(typeof mach.cells[mach.pointer] === 'number') mach.pointer = mach.cells[mach.pointer]
+        "aaD":function(mach){
+            mach.pointer = 2;
+        },
+        "aaE":function(mach){
+            mach.pointer = 3;
+        },
+        "aaF":function(mach){
+            mach.pointer = 5;
+        },
+        "aaG":function(mach){
+            mach.pointer = 6;
+        },
+        "aaH":function(mach){
+            mach.pointer = 8;
+        },
+        "aaI":function(mach){
+            mach.pointer = 10;
         },
         //ldi opcodes load an integer value to the cell
         "ldi_0":function(mach){

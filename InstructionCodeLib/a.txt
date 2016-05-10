@@ -1,0 +1,6 @@
+###File that contains a prefixed instructions and their function###
+--------------------------------------------------------------------
+
+aaa-aam ---> Increase Pointer
+aan-aaz ---> Decrease Pointer
+aaA     ---> Set pointer specific
