@@ -164,63 +164,85 @@ var HammerHead = (function(){
         "aaZ":function(mach){
             mach.pointer = Math.floor(mach.pointer / 10);
         },
-        //ldi opcodes load an integer value to the cell
-        "ldi_0":function(mach){
+        //opcodes load an integer value to the cell
+        "aba":function(mach){
             mach.cells[mach.pointer] = 0;
         },
-        "ldi_1":function(mach){
+        "abb":function(mach){
             mach.cells[mach.pointer] = 1;
         },
-        "ldi_2":function(mach){
+        "abc":function(mach){
             mach.cells[mach.pointer] = 2;
         },
-        "ldi_3":function(mach){
+        "abd":function(mach){
             mach.cells[mach.pointer] = 3;
         },
-        "ldi_4":function(mach){
+        "abe":function(mach){
             mach.cells[mach.pointer] = 4;
         },
-        "ldi_5":function(mach){
+        "abf":function(mach){
             mach.cells[mach.pointer] = 5;
         },
-        "ldi_10":function(mach){
+        "abg":function(mach){
             mach.cells[mach.pointer] = 10;
         },
-        "ldi_20":function(mach){
+        "abh":function(mach){
             mach.cells[mach.pointer] = 20;
         },
-        "ldi_25":function(mach){
+        "abi":function(mach){
             mach.cells[mach.pointer] = 25;
         },
-        "ldi_50":function(mach){
+        "abj":function(mach){
             mach.cells[mach.pointer] = 50;
         },
-        "ldi_100":function(mach){
+        "abk":function(mach){
             mach.cells[mach.pointer] = 100;
         },
-        "ldi_200":function(mach){
+        "abl":function(mach){
             mach.cells[mach.pointer] = 200;
         },
-        "ldi_500":function(mach){
+        "abm":function(mach){
             mach.cells[mach.pointer] = 500;
         },
-        "ldi_1000":function(mach){
+        "abn":function(mach){
             mach.cells[mach.pointer] = 1000;
         },
-        "ldi_2000":function(mach){
+        "abo":function(mach){
             mach.cells[mach.pointer] = 2000;
         },
-        "ldi_5000":function(mach){
+        "abp":function(mach){
             mach.cells[mach.pointer] = 5000;
         },
-        "ldi_10000":function(mach){
+        "abq":function(mach){
             mach.cells[mach.pointer] = 10000;
         },
-        //ldb opcodes load a boolean to the current cell
-        "ldb_t":function(mach){
+        "abr":function(mach){
+            mach.cells[mach.pointer] = 100000;
+        },
+        //loads decimal value
+        "abs":function(mach){
+            mach.cells[mach.pointer] = 0.1;
+        },
+        "abt":function(mach){
+            mach.cells[mach.pointer] = 0.2;
+        },
+        "abu":function(mach){
+            mach.cells[mach.pointer] = 0.25;
+        },
+        "abv":function(mach){
+            mach.cells[mach.pointer] = 0.5;
+        },
+        "abw":function(mach){
+            mach.cells[mach.pointer] = 0.6;
+        },
+        "abx":function(mach){
+            mach.cells[mach.pointer] = 0.75;
+        },
+        //load boolean
+        "aby":function(mach){
            mach.cells[mach.pointer] = true;
         },
-        "ldb_f":function(mach){
+        "abz":function(mach){
             mach.cells[mach.pointer] = false;
         },
         //lds opcodes load a string to the current cell

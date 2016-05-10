@@ -6,4 +6,7 @@ aan-aaz ---> Decrease Pointer
 aaA-aaP ---> Set pointer specific
 aaQ-aaV ---> multiply pointer
 aaW-aaZ ---> floor divide pointer
-aba-
+aba-abr ---> load integer
+abs-abx ---> load decimal-float
+aby ---> load true boolean
+abz ---> load false boolean
