@@ -379,6 +379,50 @@ var HammerHead = (function(){
         "acq":function(mach){
             mach.cells[mach.pointer] -= 50000;
         },
+        //multiply integer in current cell
+        "acr":function(mach){
+            mach.cells[mach.pointer] *= 1;
+        },
+        "acs":function(mach){
+            mach.cells[mach.pointer] *= 2;
+        },
+        "act":function(mach){
+            mach.cells[mach.pointer] *= 3;
+        },
+        "acu":function(mach){
+            mach.cells[mach.pointer] *= 5;
+        },
+        "acv":function(mach){
+            mach.cells[mach.pointer] *= 10;
+        },
+        "acw":function(mach){
+            mach.cells[mach.pointer] *= 20;
+        },
+        "acx":function(mach){
+            mach.cells[mach.pointer] *= 25;
+        },
+        "acy":function(mach){
+            mach.cells[mach.pointer] *= 50;
+        },
+        "acz":function(mach){
+            mach.cells[mach.pointer] *= 100;
+        },
+        "acA":function(mach){
+            mach.cells[mach.pointer] *= 200;
+        },
+        "acB":function(mach){
+            mach.cells[mach.pointer] *= 500;
+        },
+        "acC":function(mach){
+            mach.cells[mach.pointer] *= 1000;
+        },
+        "acD":function(mach){
+            mach.cells[mach.pointer] *= 2000;
+        },
+        "acE":function(mach){
+            mach.cells[mach.pointer] *= 5000;
+        },
+        
         //rp opcodes repeat the previous opcode some number of times. Utilizes repeatcount tracker of the machine
         "rp_1":function(mach){
             if(mach.repeatcount === false) {

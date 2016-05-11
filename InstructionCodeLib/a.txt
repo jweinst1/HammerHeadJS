@@ -20,3 +20,4 @@ abG ---> sets return to forward cell
 abH ---> sets return to previous cell
 abI-abZ ---> adds integer to current cell
 aca-acq ---> subtracts integers from current cell
+acr-acE ---> multiply integers from current cell
