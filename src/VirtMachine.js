@@ -253,97 +253,21 @@ var HammerHead = (function(){
         "abB":function(mach){
             mach.cells[mach.pointer] = [];
         },
-        //ldo opcodes load empty objects to the current cell
+        //opcodes load empty objects to the current cell
         "abC":function(mach){
             mach.cells[mach.pointer] = {};
         },
-        //ldn opcodes load null to the current cell.
+        //opcodes load null to the current cell.
         "abD":function(mach){
             mach.cells[mach.pointer] = null;
         },
-        //ldu opcodes load an undefined in the current cell
-        "adE":function(mach){
+        //opcodes load an undefined in the current cell
+        "abE":function(mach){
             mach.cells[mach.pointer] = undefined;
         },
-        //ccs opcodes concat strings to the current cell
-        "ccs_a":function(mach){
-            mach.cells[mach.pointer] += "a"
-        },
-        "ccs_b":function(mach){
-            mach.cells[mach.pointer] += "b"
-        },
-        "ccs_c":function(mach){
-            mach.cells[mach.pointer] += "c"
-        },
-        //sre opcodes set the return value
-        "sre_c":function(mach){
+        //sets return value to current cell
+        "abF":function(mach){
             mach.returnval = mach.cells[mach.pointer];
-        },
-        "sre_0":function(mach){
-            mach.returnval = mach.cells[0];
-        },
-        //adi op codes add an integer to the value of the current cell
-        "adi_1":function(mach){
-            mach.cells[mach.pointer] += 1;
-        },
-        "adi_2":function(mach){
-            mach.cells[mach.pointer] += 2;
-        },
-        //sbi op codes subtract integers from the current value of the cell
-        "sbi_1":function(mach){
-            mach.cells[mach.pointer] -= 1;
-        },
-        "sbi_2":function(mach){
-            mach.cells[mach.pointer] -= 2;
-        },
-        //mli op codes multiply integers on the current value of the cell
-        "mli_1":function(mach){
-            mach.cells[mach.pointer] *= 1;
-        },
-        "mli_2":function(mach){
-            mach.cells[mach.pointer] *= 2;
-        },
-        //dvi op codes divide integers on the current value of the cell
-        "dvi_1":function(mach){
-            mach.cells[mach.pointer] /= 1;
-        },
-        "dvi_2":function(mach){
-            mach.cells[mach.pointer] /= 2;
-        },
-        //rdi op code perform remainder operations on the current value of the cell
-        "rdi_1":function(mach){
-            mach.cells[mach.pointer] %= 1;
-        },
-        "rdi_2":function(mach){
-            mach.cells[mach.pointer] %= 2;
-        },
-        //afi op codes add the value of the current cell to the next cells
-        "afi_1":function(mach){
-            mach.cells[mach.pointer+1] += mach.cells[mach.pointer]
-        },
-        "afi_2":function(mach){
-            mach.cells[mach.pointer+2] += mach.cells[mach.pointer]
-        },
-        "afi_3":function(mach){
-            mach.cells[mach.pointer+3] += mach.cells[mach.pointer]
-        },
-        //bt opcodes set the current cell value to true if it evaluates to true
-        "bt_":function(mach){
-            mach.cells[mach.pointer] ? mach.cells[mach.pointer] = true : mach.cells[mach.pointer] = false
-        },
-        //tfw opcodes transfer values forward and overwrite the targeted cell's value
-        "tfw_1":function(mach){
-            mach.cells[mach.pointer+1] = mach.cells[mach.pointer]
-        },
-        "tfw_2":function(mach){
-            mach.cells[mach.pointer+2] = mach.cells[mach.pointer]
-        },
-        //tbw opcodes transfer values backward and overwrite the targeted cells' value
-        "tbw_1":function(mach){
-            mach.cells[mach.pointer-1] = mach.cells[mach.pointer]
-        },
-        "tbw_2":function(mach){
-            mach.cells[mach.pointer-2] = mach.cells[mach.pointer]
         },
         //rp opcodes repeat the previous opcode some number of times. Utilizes repeatcount tracker of the machine
         "rp_1":function(mach){
@@ -401,10 +325,19 @@ var HammerHead = (function(){
         var instrucs = code.split(/ |\n/);
         for(this.index = 0;this.index<instrucs.length;this.index++) {
             if(instrucs[this.index] in this.funcs) {
-                this.funcs[instrucs[this.index]](this);
+                try {
+                    this.funcs[instrucs[this.index]](this);
+                }
+                catch(err){
+                    return "ERROR"
+                }
+            }
+            //external, non-determinstic instruction that loads strings into the current cell
+            else if(/^\$.+/.test(instrucs[this.index])) {
+                this.cells[this.pointer] = instrucs[this.index].slice(1, instrucs[this.index].length);
             }
             else {
-                return "ERROR OP"
+                return "ERROR"
             }
         }
         //returns the requested value
