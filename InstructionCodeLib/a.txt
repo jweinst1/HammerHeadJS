@@ -15,3 +15,8 @@ abB ---> load empty array
 abC ---> load empty object
 abD ---> load null
 abE ---> load undefined
+abF ---> sets return value to current cell
+abG ---> sets return to forward cell
+abH ---> sets return to previous cell
+abI-abZ ---> adds integer to current cell
+aca-acq ---> subtracts integers from current cell

@@ -269,6 +269,116 @@ var HammerHead = (function(){
         "abF":function(mach){
             mach.returnval = mach.cells[mach.pointer];
         },
+        "abG":function(mach){
+            mach.returnval = mach.cells[mach.pointer+1];
+        },
+        "abH":function(mach){
+            mach.returnval = mach.cells[mach.pointer-1];
+        },
+        //adding integers
+        "abI":function(mach){
+            mach.cells[mach.pointer] += 1;
+        },
+        "abJ":function(mach){
+            mach.cells[mach.pointer] += 2;
+        },
+        "abK":function(mach){
+            mach.cells[mach.pointer] += 3;
+        },
+        "abL":function(mach){
+            mach.cells[mach.pointer] += 5;
+        },
+        "abM":function(mach){
+            mach.cells[mach.pointer] += 10;
+        },
+        "abO":function(mach){
+            mach.cells[mach.pointer] += 20;
+        },
+        "abP":function(mach){
+            mach.cells[mach.pointer] += 25;
+        },
+        "abQ":function(mach){
+            mach.cells[mach.pointer] += 50;
+        },
+        "abR":function(mach){
+            mach.cells[mach.pointer] += 100;
+        },
+        "abS":function(mach){
+            mach.cells[mach.pointer] += 200;
+        },
+        "abT":function(mach){
+            mach.cells[mach.pointer] += 500;
+        },
+        "abU":function(mach){
+            mach.cells[mach.pointer] += 1000;
+        },
+        "abV":function(mach){
+            mach.cells[mach.pointer] += 2000;
+        },
+        "abW":function(mach){
+            mach.cells[mach.pointer] += 5000;
+        },
+        "abX":function(mach){
+            mach.cells[mach.pointer] += 10000;
+        },
+        "abY":function(mach){
+            mach.cells[mach.pointer] += 25000;
+        },
+        "abZ":function(mach){
+            mach.cells[mach.pointer] += 50000;
+        },
+        //subtract integers
+        "aca":function(mach){
+            mach.cells[mach.pointer] -= 1;
+        },
+        "acb":function(mach){
+            mach.cells[mach.pointer] -= 2;
+        },
+        "acc":function(mach){
+            mach.cells[mach.pointer] -= 3;
+        },
+        "acd":function(mach){
+            mach.cells[mach.pointer] -= 5;
+        },
+        "ace":function(mach){
+            mach.cells[mach.pointer] -= 10;
+        },
+        "acf":function(mach){
+            mach.cells[mach.pointer] -= 20;
+        },
+        "acg":function(mach){
+            mach.cells[mach.pointer] -= 25;
+        },
+        "ach":function(mach){
+            mach.cells[mach.pointer] -= 50;
+        },
+        "aci":function(mach){
+            mach.cells[mach.pointer] -= 100;
+        },
+        "acj":function(mach){
+            mach.cells[mach.pointer] -= 200;
+        },
+        "ack":function(mach){
+            mach.cells[mach.pointer] -= 500;
+        },
+        "acl":function(mach){
+            mach.cells[mach.pointer] -= 1000;
+        },
+        "acm":function(mach){
+            mach.cells[mach.pointer] -= 2000;
+        },
+        "acn":function(mach){
+            mach.cells[mach.pointer] -= 5000;
+        },
+        "aco":function(mach){
+            mach.cells[mach.pointer] -= 10000;
+        },
+        "acp":function(mach){
+            mach.cells[mach.pointer] -= 25000;
+        },
+        "acq":function(mach){
+            mach.cells[mach.pointer] -= 50000;
+        },
         //rp opcodes repeat the previous opcode some number of times. Utilizes repeatcount tracker of the machine
         "rp_1":function(mach){
             if(mach.repeatcount === false) {
