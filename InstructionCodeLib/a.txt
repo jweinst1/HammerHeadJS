@@ -21,3 +21,5 @@ abH ---> sets return to previous cell
 abI-abZ ---> adds integer to current cell
 aca-acq ---> subtracts integers from current cell
 acr-acE ---> multiply integers from current cell
+acF-acM ---> divide integers in current cell
+acN-acZ ---> floor division of integers in current cell

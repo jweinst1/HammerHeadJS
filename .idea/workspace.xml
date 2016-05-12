@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
       <file leaf-file-name="VirtMachine.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3339254">
-              <caret line="424" column="8" selection-start-line="424" selection-start-column="8" selection-end-line="424" selection-end-column="8" />
+            <state vertical-scroll-proportion="1.5062166">
+              <caret line="531" column="36" selection-start-line="531" selection-start-column="36" selection-end-line="531" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -375,15 +375,15 @@
     <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3339254">
-          <caret line="424" column="8" selection-start-line="424" selection-start-column="8" selection-end-line="424" selection-end-column="8" />
+        <state vertical-scroll-proportion="1.5062166">
+          <caret line="531" column="36" selection-start-line="531" selection-start-column="36" selection-end-line="531" selection-end-column="36" />
           <folding />
         </state>
       </provider>

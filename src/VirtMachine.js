@@ -422,9 +422,73 @@ var HammerHead = (function(){
         "acE":function(mach){
             mach.cells[mach.pointer] *= 5000;
         },
-        
+        //divide integer in cell
+        "acF":function(mach){
+           mach.cells[mach.pointer] /= 2;
+        },
+        "acG":function(mach){
+            mach.cells[mach.pointer] /= 3;
+        },
+        "acH":function(mach){
+            mach.cells[mach.pointer] /= 4;
+        },
+        "acI":function(mach){
+            mach.cells[mach.pointer] /= 5;
+        },
+        "acJ":function(mach){
+            mach.cells[mach.pointer] /= 10;
+        },
+        "acK":function(mach){
+            mach.cells[mach.pointer] /= 25;
+        },
+        "acL":function(mach){
+            mach.cells[mach.pointer] /= 100;
+        },
+        "acM":function(mach){
+            mach.cells[mach.pointer] /= 1000;
+        },
+        //floor division of current cell
+        "acN":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/2)
+        },
+        "acO":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/3)
+        },
+        "acP":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/5)
+        },
+        "acQ":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/10)
+        },
+        "acR":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/20)
+        },
+        "acS":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/25)
+        },
+        "acT":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/100)
+        },
+        "acU":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/250)
+        },
+        "acV":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/500)
+        },
+        "acW":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/1000)
+        },
+        "acX":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/2000)
+        },
+        "acY":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/5000)
+        },
+        "acZ":function(mach){
+            mach.cells[mach.pointer] = Math.floor(mach.cells[mach.pointer]/1000)
+        },
         //rp opcodes repeat the previous opcode some number of times. Utilizes repeatcount tracker of the machine
-        "rp_1":function(mach){
+        "ada":function(mach){
             if(mach.repeatcount === false) {
                 mach.repeatcount = 0;
                 mach.index -= 2;
@@ -437,7 +501,20 @@ var HammerHead = (function(){
                 mach.index -= 2;
             }
         },
-        "rp_5":function(mach){
+        "adb":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 1;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adc":function(mach){
             if(mach.repeatcount === false) {
                 mach.repeatcount = 4;
                 mach.index -= 2;
@@ -450,7 +527,7 @@ var HammerHead = (function(){
                 mach.index -= 2;
             }
         },
-        "rp_10":function(mach){
+        "add":function(mach){
             if(mach.repeatcount === false) {
                 mach.repeatcount = 9;
                 mach.index -= 2;
