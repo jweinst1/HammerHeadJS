@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8a04903-d7f9-41ee-aede-f4ac0515232f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/InstructionCodeLib/b.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InstructionCodeLib/a.txt" afterPath="$PROJECT_DIR$/InstructionCodeLib/a.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VirtMachine.js" afterPath="$PROJECT_DIR$/src/VirtMachine.js" />
     </list>
@@ -54,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="a.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87921846">
-              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="b.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/InstructionCodeLib/b.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.07992895">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -68,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="802" column="12" selection-start-line="802" selection-start-column="12" selection-end-line="802" selection-end-column="12" />
+              <caret line="834" column="66" selection-start-line="834" selection-start-column="66" selection-end-line="834" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -106,6 +117,7 @@
         <option value="$PROJECT_DIR$/test.hamh" />
         <option value="$PROJECT_DIR$/src/VirtMachine.js" />
         <option value="$PROJECT_DIR$/InstructionCodeLib/a.txt" />
+        <option value="$PROJECT_DIR$/InstructionCodeLib/b.txt" />
       </list>
     </option>
   </component>
@@ -375,15 +387,23 @@
     <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="802" column="12" selection-start-line="802" selection-start-column="12" selection-end-line="802" selection-end-column="12" />
+          <caret line="834" column="66" selection-start-line="834" selection-start-column="66" selection-end-line="834" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87921846">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InstructionCodeLib/b.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07992895">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
           <folding />
         </state>
       </provider>

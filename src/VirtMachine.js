@@ -802,6 +802,37 @@ var HammerHead = (function(){
         },
         "aed":function(mach){
             mach.cells[mach.pointer] -= mach.cells[mach.pointer+10]
+        },
+        //subtract from previous cells
+        "aee":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-1]
+        },
+        "aef":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-2]
+        },
+        "aeg":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-3]
+        },
+        "aeh":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-4]
+        },
+        "aei":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-5]
+        },
+        "aej":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-6]
+        },
+        "aek":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-7]
+        },
+        "ael":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-8]
+        },
+        "aem":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-9]
+        },
+        "aen":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer-10]
         }
     };
     function HammerHead(){

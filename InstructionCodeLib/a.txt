@@ -32,3 +32,4 @@ adn-adz ---> jump forward some number of instructions
 adA-adJ ---> add value of forward cell to current
 adK-adT ---> add value of previous cell to current
 adU-aed ---> subtract forward cell from current
+aee-aen ---> subtract previous cell from current cell
