@@ -23,3 +23,8 @@ aca-acq ---> subtracts integers from current cell
 acr-acE ---> multiply integers from current cell
 acF-acM ---> divide integers in current cell
 acN-acZ ---> floor division of integers in current cell
+ada ---> repeat previous instruction 1 time
+adb ---> repeat previous instruction 2 times
+adc ---> repeat previous instruction 5 times
+add ---> repeat previous instruction 10 times
+ade-adm ---> repeating previous instruction X times

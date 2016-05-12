@@ -539,6 +539,123 @@ var HammerHead = (function(){
                 mach.repeatcount -= 1;
                 mach.index -= 2;
             }
+        },
+        "ade":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 14;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adf":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 19;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adg":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 29;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adh":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 49;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adi":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 99;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adj":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 199;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adk":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 299;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adl":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 499;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
+        },
+        "adm":function(mach){
+            if(mach.repeatcount === false) {
+                mach.repeatcount = 999;
+                mach.index -= 2;
+            }
+            else if(mach.repeatcount === 0){
+                mach.repeatcount = false;
+            }
+            else {
+                mach.repeatcount -= 1;
+                mach.index -= 2;
+            }
         }
     };
     function HammerHead(){
