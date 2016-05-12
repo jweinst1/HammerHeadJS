@@ -29,3 +29,5 @@ adc ---> repeat previous instruction 5 times
 add ---> repeat previous instruction 10 times
 ade-adm ---> repeating previous instruction X times
 adn-adz ---> jump forward some number of instructions
+adA-adJ ---> add value of forward cell to current
+adK-adT ---> add value of previous cell to current

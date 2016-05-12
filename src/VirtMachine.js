@@ -710,6 +710,68 @@ var HammerHead = (function(){
         "adz":function(mach){
             mach.index += 500;
             if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        //adding cell values from forward cells
+        "adA":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+1]
+        },
+        "adB":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+2]
+        },
+        "adC":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+3]
+        },
+        "adD":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+4]
+        },
+        "adE":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+5]
+        },
+        "adF":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+6]
+        },
+        "adG":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+7]
+        },
+        "adH":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+8]
+        },
+        "adI":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+9]
+        },
+        "adJ":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+10]
+        },
+        //adding from previous cells
+        "adK":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-1]
+        },
+        "adL":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-2]
+        },
+        "adM":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-3]
+        },
+        "adN":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-4]
+        },
+        "adO":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-5]
+        },
+        "adP":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-6]
+        },
+        "adQ":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-7]
+        },
+        "adR":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-8]
+        },
+        "adS":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-9]
+        },
+        "adT":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer-10]
         }
     };
     function HammerHead(){
