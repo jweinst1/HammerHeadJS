@@ -1,4 +1,9 @@
 ###File for b Instructions###
 --Mostly conditionals
 --------------------------------------------------
-baa-
+baa ---> Moves pointer up if cell is zero
+bab ---> Moves pointer back if cell is zero
+bac ---> Moves pointer up if cell is not zero
+bad ---> Moves pointer back if cell is not zero
+bae ---> Moves pointer up if cell is true bool
+baf ---> Moves pointer back if cell is true bool

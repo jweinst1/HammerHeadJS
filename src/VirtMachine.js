@@ -833,6 +833,25 @@ var HammerHead = (function(){
         },
         "aen":function(mach){
             mach.cells[mach.pointer] -= mach.cells[mach.pointer-10]
+        },
+        //B instructions
+        "baa":function(mach){
+            if(mach.cells[mach.pointer] === 0) mach.pointer += 1;
+        },
+        "bab":function(mach){
+            if(mach.cells[mach.pointer] === 0) mach.pointer -= 1;
+        },
+        "bac":function(mach){
+            if(mach.cells[mach.pointer] !== 0) mach.pointer += 1;
+        },
+        "bad":function(mach){
+            if(mach.cells[mach.pointer] !== 0) mach.pointer -= 1;
+        },
+        "bae":function(mach){
+            if(mach.cells[mach.pointer] === true) mach.pointer += 1;
+        },
+        "baf":function(mach){
+            if(mach.cells[mach.pointer] === true) mach.pointer -= 1;
         }
     };
     function HammerHead(){
