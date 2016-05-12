@@ -54,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="a.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.21314387">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VirtMachine.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VirtMachine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76021314">
-              <caret line="658" column="9" selection-start-line="658" selection-start-column="9" selection-end-line="658" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="710" column="29" selection-start-line="710" selection-start-column="29" selection-end-line="710" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -104,8 +104,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test.hamh" />
-        <option value="$PROJECT_DIR$/InstructionCodeLib/a.txt" />
         <option value="$PROJECT_DIR$/src/VirtMachine.js" />
+        <option value="$PROJECT_DIR$/InstructionCodeLib/a.txt" />
       </list>
     </option>
   </component>
@@ -372,18 +372,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
+    <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <caret line="710" column="29" selection-start-line="710" selection-start-column="29" selection-end-line="710" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VirtMachine.js">
+    <entry file="file://$PROJECT_DIR$/InstructionCodeLib/a.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76021314">
-          <caret line="658" column="9" selection-start-line="658" selection-start-column="9" selection-end-line="658" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.21314387">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
         </state>
       </provider>

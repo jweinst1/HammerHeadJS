@@ -28,3 +28,4 @@ adb ---> repeat previous instruction 2 times
 adc ---> repeat previous instruction 5 times
 add ---> repeat previous instruction 10 times
 ade-adm ---> repeating previous instruction X times
+adn-adz ---> jump forward some number of instructions

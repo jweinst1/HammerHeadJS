@@ -656,6 +656,60 @@ var HammerHead = (function(){
                 mach.repeatcount -= 1;
                 mach.index -= 2;
             }
+        },
+        //jump forward some number
+        "adn":function(mach){
+            mach.index += 1;
+            //prevention of array out of bounds
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "ado":function(mach){
+            mach.index += 2;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adp":function(mach){
+            mach.index += 3;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adq":function(mach){
+            mach.index += 4;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adr":function(mach){
+            mach.index += 5;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "ads":function(mach){
+            mach.index += 6;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adt":function(mach){
+            mach.index += 10;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adu":function(mach){
+            mach.index += 20;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adv":function(mach){
+            mach.index += 50;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adw":function(mach){
+            mach.index += 100;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adx":function(mach){
+            mach.index += 150;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "ady":function(mach){
+            mach.index += 250;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
+        },
+        "adz":function(mach){
+            mach.index += 500;
+            if(mach.index > mach.instrucnum) mach.index = mach.instrucnum;
         }
     };
     function HammerHead(){
@@ -667,10 +721,12 @@ var HammerHead = (function(){
         this.repeatcount = false;
         this.funcs = ASM;
         this.returnval = null;
+        this.instrucnum = 0;
     }
     HammerHead.prototype.runcode = function(code){
         //splits the code by newline or white space
         var instrucs = code.split(/ |\n/);
+        this.instrucnum = instrucs.length-1;
         for(this.index = 0;this.index<instrucs.length;this.index++) {
             if(instrucs[this.index] in this.funcs) {
                 try {
