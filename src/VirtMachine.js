@@ -772,6 +772,36 @@ var HammerHead = (function(){
         },
         "adT":function(mach){
             mach.cells[mach.pointer] += mach.cells[mach.pointer-10]
+        },
+        "adU":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+1]
+        },
+        "adV":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+2]
+        },
+        "adW":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+3]
+        },
+        "adX":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+4]
+        },
+        "adY":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+5]
+        },
+        "adZ":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+6]
+        },
+        "aea":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+7]
+        },
+        "aeb":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+8]
+        },
+        "aec":function(mach){
+            mach.cells[mach.pointer] += mach.cells[mach.pointer+9]
+        },
+        "aed":function(mach){
+            mach.cells[mach.pointer] -= mach.cells[mach.pointer+10]
         }
     };
     function HammerHead(){
